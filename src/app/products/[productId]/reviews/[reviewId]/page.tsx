@@ -1,3 +1,5 @@
+'use client'; // to ensure we can recover on client side
+
 import { notFound } from 'next/navigation';
 
 // inducing an error

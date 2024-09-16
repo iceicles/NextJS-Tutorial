@@ -10,6 +10,17 @@
  * Add functionality to attempt to recover from an error without a full page reload
  */
 
-export default function ErrorBoundary({ error }: { error: Error }) {
-  return <div>{error.message}</div>;
+export default function ErrorBoundary({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
+  return (
+    <div>
+      {error.message}
+      <button onClick={reset}>Try again</button>
+    </div>
+  );
 }
